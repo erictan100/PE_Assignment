@@ -18,24 +18,28 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
+        val navigationController = this.findNavController(R.id.navigation_fragment_main)
         val navigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation_view)
 
-        val navigationController = this.findNavController(R.id.navigation_fragment_main)
 
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.homeFragment, R.id.statisticFragment, R.id.gameFragment, R.id.profileFragment
-            )
-        )
+        navigationView.setupWithNavController(navigationController)
+
+//        val appBarConfiguration = AppBarConfiguration(
+//            setOf(
+//                R.id.homeFragment, R.id.statisticFragment, R.id.scanFragment, R.id.gameFragment, R.id.profileFragment
+//            )
+//        )
 
         navigationView.background = null
+        navigationView.menu.getItem(2).isEnabled = false
 
-        setupActionBarWithNavController(navigationController, appBarConfiguration)
-        navigationView.setupWithNavController(navigationController)
+//        setupActionBarWithNavController(navigationController), appBarConfiguration)
+//        navigationView.setupWithNavController(navigationController)
 
         val floating_btn = findViewById<FloatingActionButton>(R.id.floating_btn)
         floating_btn.setOnClickListener{
             navigationController.navigate(R.id.scanFragment)
         }
+
     }
 }
