@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/LENOVO/Desktop/PE_Assignment/app/src/main/res/drawable/above_background.xml" value="0.1545" />
+        <entry key="..\:/Users/LENOVO/Desktop/PE_Assignment/app/src/main/res/drawable/bottom_navigation_background.xml" value="0.1" />
+        <entry key="..\:/Users/LENOVO/Desktop/PE_Assignment/app/src/main/res/drawable/bottom_navigation_line.xml" value="0.1" />
         <entry key="..\:/Users/LENOVO/Desktop/PE_Assignment/app/src/main/res/drawable/button_background.xml" value="0.1" />
         <entry key="..\:/Users/LENOVO/Desktop/PE_Assignment/app/src/main/res/drawable/gift_image.xml" value="0.1" />
         <entry key="..\:/Users/LENOVO/Desktop/PE_Assignment/app/src/main/res/drawable/profile_background.xml" value="0.1" />
@@ -24,6 +26,7 @@
         <entry key="..\:/Users/LENOVO/Desktop/PE_Assignment/app/src/main/res/layout/fragment_quiz_end.xml" value="0.16" />
         <entry key="..\:/Users/LENOVO/Desktop/PE_Assignment/app/src/main/res/layout/fragment_quiz_game.xml" value="0.2" />
         <entry key="..\:/Users/LENOVO/Desktop/PE_Assignment/app/src/main/res/layout/fragment_scan.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/Desktop/PE_Assignment/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/User/AndroidStudioProjects/PE_Assignment/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/User/AndroidStudioProjects/PE_Assignment/app/src/main/res/layout/fragment_scan.xml" value="0.17831813576494426" />
         <entry key="..\:/Users/User/AndroidStudioProjects/PE_Assignment/app/src/main/res/layout/fragment_self_test.xml" value="0.33" />

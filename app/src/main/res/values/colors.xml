@@ -16,5 +16,6 @@
     <color name="Medium_Aquamarine">#5FDD9D</color> <!--light Green-->
     <color name="Middle_Green">#499167</color> <!-- primary green-->
     <color name="Rifle_Green">#3F4531</color>
+    <color name="light_Green">#6BDE85</color>
     <color name="Sassy_Yellow">#FFF3B7</color> <!-- light-yellow -->
 </resources>
