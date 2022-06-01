@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    app:cardBackgroundColor="@color/Medium_Aquamarine"
+    app:cardCornerRadius="25dp"
+    app:cardElevation="10dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="20dp"
+            android:stretchColumns="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TableRow
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+                <TextView
+                    android:id="@+id/cert_doseNumber"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Dose 1:"
+                    android:textSize="@dimen/hintTextSize"
+                    android:textStyle="bold"/>
+            </TableRow>
+            <TableRow
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+                <TextView
+                    android:id="@+id/cert_doseDate"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Date: DD/MM/YYYY"
+                    android:textSize="@dimen/hintTextSize"/>
+            </TableRow>
+            <TableRow
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+                <TextView
+                    android:id="@+id/cert_doseTime"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Time: HH:MM"
+                    android:textSize="@dimen/hintTextSize"/>
+            </TableRow>
+            <TableRow
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+                <TextView
+                    android:id="@+id/cert_doseVacType"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Vaccination Type: Sinovac/Pfizer"
+                    android:textSize="@dimen/hintTextSize"/>
+            </TableRow>
+            <TableRow
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+                <TextView
+                    android:id="@+id/cert_dosFacility"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Facility: Clinic"
+                    android:textSize="@dimen/hintTextSize"/>
+            </TableRow>
+            <TableRow
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+                <TextView
+                    android:id="@+id/cert_doseBatch"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Batch Number: 01234567"
+                    android:textSize="@dimen/hintTextSize"/>
+            </TableRow>
+
+        </TableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

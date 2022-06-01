@@ -1,5 +1,15 @@
 <resources>
     <string name="app_name">PE_Assignment</string>
+    <string name="copyright">Copyright 2022-2023 \n SWE401 Embedded Programming \n Group WEP \n All Right Reserved</string>
+    <string name="no_language">Currently our application only support for English version. Sorry for any inconvenience</string>
+
+    <string-array name="state">
+        <item>Selangor</item>
+        <item>Penang</item>
+        <item>Kedah</item>
+        <item>Perlis</item>
+    </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
