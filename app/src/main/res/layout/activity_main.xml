@@ -20,17 +20,21 @@
             android:src="@drawable/small_logo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.10"
+            app:layout_constraintHorizontal_bias="0.05"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
+        <androidx.appcompat.widget.AppCompatImageButton
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginEnd="28dp"
+            android:background="@android:color/transparent"
+            android:pointerIcon="hand"
+            android:scaleType="fitXY"
             android:src="@drawable/ic_setting_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -59,6 +63,8 @@
             android:layout_width="match_parent"
             android:layout_height="58dp"
             android:background="@android:color/transparent"
+            android:backgroundTint="@drawable/bottom_navigation_background"
+            android:backgroundTintMode="multiply"
             app:itemBackground="@drawable/bottom_navigation_line"
             app:menu="@menu/bottom_nav_menu"/>
 
