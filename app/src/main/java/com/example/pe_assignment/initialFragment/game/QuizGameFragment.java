@@ -2,65 +2,55 @@ package com.example.pe_assignment.initialFragment.game;
 
 import android.os.Bundle;
 
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
+import com.example.pe_assignment.AboutFragment;
 import com.example.pe_assignment.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link QuizGameFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class QuizGameFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private AppCompatButton btn_quizAnswer1;
 
     public QuizGameFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment QuizGameFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static QuizGameFragment newInstance(String param1, String param2) {
         QuizGameFragment fragment = new QuizGameFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
+
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_quiz_game, container, false);
+        View root =  inflater.inflate(R.layout.fragment_quiz_game, container, false);
+
+        btn_quizAnswer1 = root.findViewById(R.id.btn_quizAnswer1);
+
+        btn_quizAnswer1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View view) {
+                FragmentTransaction fr = getParentFragmentManager().beginTransaction();
+                fr.replace(R.id.nav_host_fragment_activity_Quiz, new QuizEndFragment());
+                fr.commit();
+            }
+        });
+
+        return root;
     }
 }

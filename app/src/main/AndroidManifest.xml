@@ -17,7 +17,7 @@
             android:exported="false" />
         <activity
             android:name=".SettingActivity"
-            android:exported="false" />
+            android:exported="false"/>
         <activity
             android:name=".initialFragment.game.QuizMenuActivity"
             android:exported="false" />

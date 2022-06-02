@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/settingSelectionFragment">
+
+    <fragment
+        android:id="@+id/settingSelectionFragment"
+        android:name="com.example.pe_assignment.SettingSelectionFragment"
+        android:label="fragment_setting_selection"
+        tools:layout="@layout/fragment_setting_selection" >
+        <action
+            android:id="@+id/action_settingSelectionFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_settingSelectionFragment_to_languageFragment"
+            app:destination="@id/languageFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/languageFragment"
+        android:name="com.example.pe_assignment.LanguageFragment"
+        android:label="fragment_language"
+        tools:layout="@layout/fragment_language" >
+        <action
+            android:id="@+id/action_languageFragment_to_settingSelectionFragment"
+            app:destination="@id/settingSelectionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.pe_assignment.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" >
+        <action
+            android:id="@+id/action_aboutFragment_to_settingSelectionFragment"
+            app:destination="@id/settingSelectionFragment" />
+    </fragment>
+</navigation>

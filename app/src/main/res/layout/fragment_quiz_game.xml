@@ -17,6 +17,8 @@
             android:layout_marginTop="18sp"
             android:background="@android:color/transparent"
             android:scaleType="fitXY"
+            android:visibility="invisible"
+            android:clickable="false"
             android:src="@drawable/back_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.05"
@@ -24,23 +26,10 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
-            android:text="Quiz Class"
-            android:textColor="@color/black"
-            android:textSize="@dimen/titleTextSize"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/backButtonQuizGame" />
-
-        <TextView
             android:id="@+id/tv_questionNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="65dp"
             android:text="(Question 5/10):"
             android:textColor="@color/black"
             android:textSize="@dimen/normalTextSize"
@@ -48,7 +37,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.061"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView1" />
+            app:layout_constraintTop_toBottomOf="@+id/backButtonQuizGame" />
 
         <TextView
             android:id="@+id/tv_question"

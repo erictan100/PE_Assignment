@@ -10,16 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/top_background"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/small_background"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <ImageButton
             android:id="@+id/backButtonLanguage"
             android:layout_width="25dp"
@@ -27,23 +17,24 @@
             android:background="@android:color/transparent"
             android:scaleType="fitXY"
             android:src="@drawable/back_button"
-            app:layout_constraintBottom_toBottomOf="@+id/top_background"
+            app:layout_constraintBottom_toBottomOf="@+id/title_language"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.05"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@+id/title_language" />
 
         <TextView
+            android:id="@+id/title_language"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="Language"
             android:textColor="@color/black"
             android:textSize="@dimen/titleTextSize"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/top_background"
-            app:layout_constraintEnd_toEndOf="@+id/top_background"
-            app:layout_constraintHorizontal_bias="0.08"
-            app:layout_constraintStart_toEndOf="@+id/backButtonLanguage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.22"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -58,7 +49,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.057"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/top_background" />
+            app:layout_constraintTop_toBottomOf="@+id/title_language" />
 
         <TextView
             android:id="@+id/language_Chinese"
