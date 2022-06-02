@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PE_Assignment">
         <activity
+            android:name=".MyRewardActivity"
+            android:exported="false" />
+        <activity
             android:name=".EditProfileActivity"
             android:exported="false" />
         <activity

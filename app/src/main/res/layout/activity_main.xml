@@ -63,8 +63,6 @@
             android:layout_width="match_parent"
             android:layout_height="58dp"
             android:background="@android:color/transparent"
-            android:backgroundTint="@drawable/bottom_navigation_background"
-            android:backgroundTintMode="multiply"
             app:itemBackground="@drawable/bottom_navigation_line"
             app:menu="@menu/bottom_nav_menu"/>
 
