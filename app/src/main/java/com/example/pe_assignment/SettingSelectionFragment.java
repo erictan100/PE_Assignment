@@ -75,7 +75,7 @@ public class SettingSelectionFragment extends Fragment {
             @Override
             public void onClick (View view) {
                 FragmentTransaction fr = getParentFragmentManager().beginTransaction();
-                fr.replace(R.id.nav_host_fragment_activity_setting, new AboutFragment());
+                fr.replace(R.id.nav_host_fragment_activity_setting, new LanguageFragment());
                 fr.commit();
             }
         });
