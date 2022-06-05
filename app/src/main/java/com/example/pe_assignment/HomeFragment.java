@@ -111,6 +111,16 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        reward.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(getActivity(), MyRewardActivity.class);
+                startActivity(intent);
+                getActivity().finish();
+            }
+        });
+
         return root;
     }
 

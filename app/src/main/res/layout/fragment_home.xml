@@ -20,6 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="30dp"
+                android:background="@color/Sassy_Yellow"
                 android:layout_marginTop="30dp">
 
                 <LinearLayout
@@ -45,8 +46,10 @@
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/app_features"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="@android:color/transparent"
                     android:layout_width="match_parent"
-                    android:layout_height="250dp"
+                    android:layout_height="230dp"
                     android:layout_toRightOf="@id/appfeatured_background"
                     android:background="@color/white" />
 
@@ -221,7 +224,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="Reward"
+                        android:text="Coming Soon"
+                        android:textSize="13sp"
                         android:textAlignment="center"
                         android:textColor="#FF757474" />
                 </LinearLayout>
