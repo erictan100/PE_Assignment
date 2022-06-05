@@ -3,9 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="20dp"
-    android:layout_marginLeft="5dp"
-    android:layout_marginRight="5dp"
     app:cardBackgroundColor="@color/Medium_Aquamarine"
     app:cardCornerRadius="25dp"
     app:cardElevation="10dp"
@@ -72,7 +69,7 @@
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp">
                 <TextView
-                    android:id="@+id/cert_dosFacility"
+                    android:id="@+id/cert_doseFacility"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:text="Facility: Clinic"

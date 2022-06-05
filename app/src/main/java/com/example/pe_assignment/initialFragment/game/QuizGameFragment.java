@@ -17,7 +17,7 @@ import com.example.pe_assignment.R;
 public class QuizGameFragment extends Fragment {
 
 
-    private AppCompatButton btn_quizAnswer1;
+    private AppCompatButton btn_quizAnswer1, btn_quizAnswer2, btn_quizAnswer3, btn_quizAnswer4;
 
     public QuizGameFragment() {
         // Required empty public constructor
@@ -41,8 +41,38 @@ public class QuizGameFragment extends Fragment {
         View root =  inflater.inflate(R.layout.fragment_quiz_game, container, false);
 
         btn_quizAnswer1 = root.findViewById(R.id.btn_quizAnswer1);
+        btn_quizAnswer2 = root.findViewById(R.id.btn_quizAnswer2);
+        btn_quizAnswer3 = root.findViewById(R.id.btn_quizAnswer3);
+        btn_quizAnswer4 = root.findViewById(R.id.btn_quizAnswer4);
 
         btn_quizAnswer1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View view) {
+                FragmentTransaction fr = getParentFragmentManager().beginTransaction();
+                fr.replace(R.id.nav_host_fragment_activity_Quiz, new QuizEndFragment());
+                fr.commit();
+            }
+        });
+
+        btn_quizAnswer1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View view) {
+                FragmentTransaction fr = getParentFragmentManager().beginTransaction();
+                fr.replace(R.id.nav_host_fragment_activity_Quiz, new QuizEndFragment());
+                fr.commit();
+            }
+        });
+
+        btn_quizAnswer3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View view) {
+                FragmentTransaction fr = getParentFragmentManager().beginTransaction();
+                fr.replace(R.id.nav_host_fragment_activity_Quiz, new QuizEndFragment());
+                fr.commit();
+            }
+        });
+
+        btn_quizAnswer4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View view) {
                 FragmentTransaction fr = getParentFragmentManager().beginTransaction();

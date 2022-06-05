@@ -9,8 +9,6 @@ import android.widget.Button
 import androidx.navigation.fragment.findNavController
 import com.example.pe_assignment.R
 
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 
 class ScannerCheckInFragment : Fragment() {
