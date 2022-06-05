@@ -9,7 +9,7 @@ import com.example.pe_assignment.R
 
 
 class GlobalStatisticsFragment : Fragment() {
-    
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
