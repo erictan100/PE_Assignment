@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".initialFragment.home.SelfAssessmentFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Self-Test"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/frameLayout">
+
+        <LinearLayout
+            android:id="@+id/LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="329dp"
+                android:layout_height="315dp"
+                android:layout_marginLeft="43dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="42dp"
+                app:cardCornerRadius="10dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/Sassy_Yellow">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="130dp"
+                        android:layout_height="32dp"
+                        android:layout_marginEnd="199dp"
+                        android:gravity="center"
+                        android:text="Question 1"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/textView2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="298dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginEnd="17dp"
+                        android:textStyle="bold"
+                        android:text="1. Are you exhibiting 2 or more symptoms as listed below?"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textView" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="298dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginEnd="17dp"
+                        android:text="&#8226; Fever \n &#8226; Chills \n &#8226; Shivering (rigor) \n &#8226; Body ache \n &#8226; Headache \n &#8226; Sore Throat \n &#8226; Nausea or vomiting \n &#8226; Diarrhea \n &#8226; Fatigue \n &#8226; Runny nose or nasal congestion "
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textView2" />
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="234dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textView3">
+
+                        <RadioButton
+                            android:id="@+id/radio1"
+                            android:layout_width="70dp"
+                            android:layout_height="25dp"
+                            android:text="Yes"
+                            android:textSize="12dp" />
+
+                        <RadioButton
+                            android:id="@+id/radio2"
+                            android:layout_width="70dp"
+                            android:layout_height="25dp"
+                            android:text="No"
+                            android:textSize="12dp" />
+                    </RadioGroup>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="329dp"
+                android:layout_height="210dp"
+                android:layout_marginLeft="43dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginRight="42dp"
+                app:cardCornerRadius="10dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/Sassy_Yellow">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="130dp"
+                        android:layout_height="32dp"
+                        android:layout_marginEnd="199dp"
+                        android:gravity="center"
+                        android:text="Question 2"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/textView5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="298dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginEnd="17dp"
+                        android:textStyle="bold"
+                        android:text="2. Besides the above, are you exhibiting any of the symptoms listed below?"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textView4" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="298dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginEnd="17dp"
+                        android:text="&#8226; Cough \n &#8226; Difficulty breathing \n &#8226; Loss of smell \n &#8226; Loss of taste"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textView5" />
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="234dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textView6">
+
+                        <RadioButton
+                            android:id="@+id/radio3"
+                            android:layout_width="70dp"
+                            android:layout_height="25dp"
+                            android:text="Yes"
+                            android:textSize="12dp" />
+
+                        <RadioButton
+                            android:id="@+id/radio4"
+                            android:layout_width="70dp"
+                            android:layout_height="25dp"
+                            android:text="No"
+                            android:textSize="12dp" />
+                    </RadioGroup>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="329dp"
+                android:layout_height="140dp"
+                android:layout_marginLeft="43dp"
+                android:layout_marginRight="42dp"
+                android:layout_marginTop="32dp"
+                app:cardCornerRadius="10dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/Sassy_Yellow">
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="130dp"
+                        android:layout_height="32dp"
+                        android:layout_marginEnd="199dp"
+                        android:gravity="center"
+                        android:text="Question 3"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/textView8"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="298dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginEnd="17dp"
+                        android:textStyle="bold"
+                        android:text="3. Have you attended any event/areas associated with known COVID-19 cluster?"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textView7" />
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="234dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textView8">
+
+                        <RadioButton
+                            android:id="@+id/radio5"
+                            android:layout_width="70dp"
+                            android:layout_height="25dp"
+                            android:text="Yes"
+                            android:textSize="12dp" />
+
+                        <RadioButton
+                            android:id="@+id/radio6"
+                            android:layout_width="70dp"
+                            android:layout_height="25dp"
+                            android:text="No"
+                            android:textSize="12dp" />
+                    </RadioGroup>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="329dp"
+                android:layout_height="140dp"
+                android:layout_marginLeft="43dp"
+                android:layout_marginRight="42dp"
+                android:layout_marginTop="32dp"
+                app:cardCornerRadius="10dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/Sassy_Yellow">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="130dp"
+                        android:layout_height="32dp"
+                        android:layout_marginEnd="199dp"
+                        android:gravity="center"
+                        android:text="Question 4"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/textView10"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="298dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginEnd="17dp"
+                        android:textStyle="bold"
+                        android:text="4. Have you travelled abroad within the last 14 days?"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textView9" />
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="234dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textView10">
+
+                        <RadioButton
+                            android:id="@+id/radio7"
+                            android:layout_width="70dp"
+                            android:layout_height="25dp"
+                            android:text="Yes"
+                            android:textSize="12dp" />
+
+                        <RadioButton
+                            android:id="@+id/radio8"
+                            android:layout_width="70dp"
+                            android:layout_height="25dp"
+                            android:text="No"
+                            android:textSize="12dp" />
+                    </RadioGroup>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/self_assessment_submit"
+                android:layout_width="329dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="43dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginRight="42dp"
+                android:layout_marginBottom="180dp"
+                android:background="@drawable/roundedbutton"
+                android:backgroundTint="@color/Middle_Green"
+                android:text="Submit"
+                android:textColor="#000000" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

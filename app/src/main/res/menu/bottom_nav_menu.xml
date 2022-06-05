@@ -9,11 +9,11 @@
     <item
         android:id="@+id/statisticFragment"
         android:title="Statistic"
-        android:icon="@drawable/ic_baseline_home_24"/>
+        android:icon="@drawable/ic_baseline_bar_chart_24"/>
 
     <item
         android:id="@+id/scanFragment"
-        android:title="" />
+        android:title=""/>
 
     <item
         android:id="@+id/gameFragment"

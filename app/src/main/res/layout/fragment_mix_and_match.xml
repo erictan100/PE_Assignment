@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".initialFragment.game.MixAndMatchFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mix and Match"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="570dp"
+        android:layout_marginTop="90dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="367dp"
+                android:layout_height="360dp"
+                android:layout_marginLeft="23dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/Sassy_Yellow"
+                app:cardCornerRadius="15dp">
+
+
+                <TextView
+                    android:id="@+id/textView53"
+                    android:layout_width="275dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="46dp"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:text="Rewards"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView54"
+                    android:layout_width="165dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="77dp"
+                    android:gravity="center"
+                    android:text="Score"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/textView55"
+                    android:layout_width="165dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="186dp"
+                    android:layout_marginTop="77dp"
+                    android:gravity="center"
+                    android:text="Rewards"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/textView56"
+                    android:layout_width="165dp"
+                    android:layout_height="73dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="102dp"
+                    android:gravity="center"
+                    android:text="40 secs"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/textView57"
+                    android:layout_width="165dp"
+                    android:layout_height="73dp"
+                    android:layout_marginLeft="186dp"
+                    android:layout_marginTop="102dp"
+                    android:gravity="center"
+                    android:text="10 points"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/textView58"
+                    android:layout_width="165dp"
+                    android:layout_height="73dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="175dp"
+                    android:gravity="center"
+                    android:text="50 secs"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/textView59"
+                    android:layout_width="165dp"
+                    android:layout_height="73dp"
+                    android:layout_marginLeft="186dp"
+                    android:layout_marginTop="175dp"
+                    android:gravity="center"
+                    android:text="30 points"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/textView60"
+                    android:layout_width="165dp"
+                    android:layout_height="73dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="248dp"
+                    android:gravity="center"
+                    android:text="60 secs"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/textView61"
+                    android:layout_width="165dp"
+                    android:layout_height="73dp"
+                    android:layout_marginLeft="186dp"
+                    android:layout_marginTop="248dp"
+                    android:gravity="center"
+                    android:text="60 points"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/textView62"
+                    android:layout_width="310dp"
+                    android:layout_height="33dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="325dp"
+                    android:gravity="center"
+                    android:text="Score calculated by remaining time"
+                    android:textStyle="italic" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button6"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="117dp"
+                android:layout_marginTop="52dp"
+                android:layout_marginBottom="110dp"
+                android:background="@drawable/roundedbutton"
+                android:text="Start"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

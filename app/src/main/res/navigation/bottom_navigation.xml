@@ -9,7 +9,14 @@
         android:id="@+id/homeFragment"
         android:name="com.example.pe_assignment.initialFragment.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_FAQFragment"
+            app:destination="@id/FAQFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_selfAssessmentFragment"
+            app:destination="@id/selfAssessmentFragment" />
+    </fragment>
     <fragment
         android:id="@+id/statisticFragment"
         android:name="com.example.pe_assignment.initialFragment.stat.StatisticFragment"
@@ -19,15 +26,92 @@
         android:id="@+id/scanFragment"
         android:name="com.example.pe_assignment.initialFragment.scan.ScanFragment"
         android:label="fragment_scan"
-        tools:layout="@layout/fragment_scan" />
+        tools:layout="@layout/fragment_scan" >
+        <action
+            android:id="@+id/action_scanFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_scanFragment_to_QRScannerFragment"
+            app:destination="@id/QRScannerFragment" />
+    </fragment>
     <fragment
         android:id="@+id/gameFragment"
         android:name="com.example.pe_assignment.initialFragment.game.GameFragment"
         android:label="fragment_game"
-        tools:layout="@layout/fragment_game" />
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_gameFragment_to_mixAndMatchFragment2"
+            app:destination="@id/mixAndMatchFragment2" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.pe_assignment.initialFragment.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/mixAndMatchFragment2"
+        android:name="com.example.pe_assignment.initialFragment.game.MixAndMatchFragment"
+        android:label="fragment_mix_and_match"
+        tools:layout="@layout/fragment_mix_and_match" >
+        <action
+            android:id="@+id/action_mixAndMatchFragment2_to_gameFragment"
+            app:destination="@id/gameFragment" />
+        <action
+            android:id="@+id/action_mixAndMatchFragment2_to_maMgameFragment"
+            app:destination="@id/maMgameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/FAQFragment"
+        android:name="com.example.pe_assignment.initialFragment.home.FAQFragment"
+        android:label="fragment_f_a_q"
+        tools:layout="@layout/fragment_f_a_q" >
+        <action
+            android:id="@+id/action_FAQFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selfAssessmentFragment"
+        android:name="com.example.pe_assignment.initialFragment.home.SelfAssessmentFragment"
+        android:label="fragment_self_assessment"
+        tools:layout="@layout/fragment_self_assessment" >
+        <action
+            android:id="@+id/action_selfAssessmentFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/maMgameFragment"
+        android:name="com.example.pe_assignment.initialFragment.game.MaMgameFragment"
+        android:label="fragment_ma_mgame"
+        tools:layout="@layout/fragment_ma_mgame" >
+        <action
+            android:id="@+id/action_maMgameFragment_to_mixAndMatchFragment2"
+            app:destination="@id/mixAndMatchFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.pe_assignment.initialFragment.scan.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" >
+        <action
+            android:id="@+id/action_historyFragment_to_scanFragment"
+            app:destination="@id/scanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/QRScannerFragment"
+        android:name="com.example.pe_assignment.initialFragment.scan.QRScannerFragment"
+        android:label="fragment_q_r_scanner"
+        tools:layout="@layout/fragment_q_r_scanner" >
+        <action
+            android:id="@+id/action_QRScannerFragment_to_scannerCheckInFragment"
+            app:destination="@id/scannerCheckInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scannerCheckInFragment"
+        android:name="com.example.pe_assignment.initialFragment.scan.ScannerCheckInFragment"
+        android:label="fragment_scanner_check_in"
+        tools:layout="@layout/fragment_scanner_check_in" >
+        <action
+            android:id="@+id/action_scannerCheckInFragment_to_scanFragment"
+            app:destination="@id/scanFragment" />
+    </fragment>
 </navigation>

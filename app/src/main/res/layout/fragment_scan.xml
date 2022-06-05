@@ -1,16 +1,300 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".initialFragment.scan.ScanFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="30dp"
-        android:textAlignment="center"
-        android:text="scaning" />
+        android:layout_height="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check-In"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/frameLayout">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profile_card"
+                android:layout_width="380dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="17dp"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/Sassy_Yellow">
+
+
+                    <FrameLayout
+                        android:id="@+id/frameLayout2"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/simplecircle"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginBottom="22dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/ic_baseline_person_24" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="245dp"
+                        android:layout_height="43dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginEnd="3dp"
+                        android:textSize="30dp"
+                        android:text="Name"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/frameLayout2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="237dp"
+                        android:layout_height="26dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="11dp"
+                        android:layout_marginEnd="11dp"
+                        android:layout_marginBottom="22dp"
+                        android:text="Status: Low Risk"
+                        android:textSize="20dp"
+                        android:textStyle="italic"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/frameLayout2"
+                        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="380dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="17dp"
+                app:cardCornerRadius="15dp"
+                android:backgroundTint="@color/Sassy_Yellow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_card">
+
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="217dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="17dp"
+                    android:gravity="center_vertical"
+                    android:text="View Check-In History"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dp"
+                    android:layout_marginLeft="266dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/roundedbutton"
+                    android:textColor="@color/white"
+                    android:text="History"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="163dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="31dp"
+                android:layout_marginEnd="229dp"
+                android:text="Last Check-In"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/checkInCard"
+                android:layout_width="372dp"
+                android:layout_height="225dp"
+                android:backgroundTint="@color/Sassy_Yellow"
+                app:cardCornerRadius="15dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView16">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="85dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="80dp"
+                    android:src="@drawable/ic_baseline_location_on_24" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="163dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginRight="109dp"
+                    android:layout_marginTop="21dp"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:text="Location" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="252dp"
+                    android:layout_height="57dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="41dp"
+                    android:textSize="13dp"
+                    android:text="Last Check-In location" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="80dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="192dp"
+                    android:layout_marginTop="105dp"
+                    android:layout_marginLeft="100dp"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:text="Date:" />
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="110dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="125dp"
+                    android:layout_marginRight="162dp"
+                    android:textSize="13dp"
+                    android:text="Check-In date" />
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="80dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="240dp"
+                    android:layout_marginRight="52dp"
+                    android:layout_marginTop="105dp"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:text="Time:" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="110dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="240dp"
+                    android:layout_marginTop="125dp"
+                    android:layout_marginRight="22dp"
+                    android:textSize="13dp"
+                    android:text="Check-In Time" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="80dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="152dp"
+                    android:layout_marginRight="192dp"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:text="Status:" />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="110dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="172dp"
+                    android:layout_marginRight="162dp"
+                    android:textSize="13dp"
+                    android:text="Check-In" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="232dp"
+                    android:layout_marginTop="162dp"
+                    android:layout_marginRight="20dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/roundedbutton"
+                    android:text="Check-Out"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button4"
+                android:layout_width="365dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="180dp"
+                android:background="@drawable/roundedbutton"
+                android:text="Check-In"
+                android:textColor="@color/white"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkInCard" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

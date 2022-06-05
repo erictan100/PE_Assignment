@@ -12,6 +12,7 @@ import androidx.appcompat.widget.AppCompatButton
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.pe_assignment.MyRewardActivity
 import com.example.pe_assignment.R
 
@@ -43,6 +44,12 @@ class GameFragment : Fragment() {
         quiz_game_btn!!.setOnClickListener{
            val intent = Intent (activity, QuizMenuActivity::class.java)
            startActivity(intent)
+        }
+
+        val mixGameBtn = root.findViewById<ImageButton>(R.id.mix_game_btn)
+        mixGameBtn.setOnClickListener{
+            val action = GameFragmentDirections.actionGameFragmentToMixAndMatchFragment2()
+            findNavController().navigate(action)
         }
 
         return root

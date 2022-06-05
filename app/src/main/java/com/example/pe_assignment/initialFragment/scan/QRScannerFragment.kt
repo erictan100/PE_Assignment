@@ -1,4 +1,4 @@
-package com.example.pe_assignment.initialFragment.home
+package com.example.pe_assignment.initialFragment.scan
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,11 +8,14 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
 import com.example.pe_assignment.R
+import com.example.pe_assignment.initialFragment.home.HomeFragmentDirections
 
-class HomeFragment : Fragment() {
+
+class QRScannerFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
     }
 
     override fun onCreateView(
@@ -20,25 +23,21 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view:View = inflater.inflate(R.layout.fragment_home, container, false)
+        val view:View = inflater.inflate(R.layout.fragment_q_r_scanner, container, false)
 
-        val button_home = view.findViewById<Button>(R.id.button)
-        button_home.setOnClickListener{
-            val action = HomeFragmentDirections.actionHomeFragmentToSelfAssessmentFragment()
+        val button_qr = view.findViewById<Button>(R.id.button5)
+        button_qr.setOnClickListener{
+            val action = QRScannerFragmentDirections.actionQRScannerFragmentToScannerCheckInFragment()
             findNavController().navigate(action)
-        }
-
-        val button_home2 = view.findViewById<Button>(R.id.button2)
-        button_home2.setOnClickListener{
-            val action2 = HomeFragmentDirections.actionHomeFragmentToFAQFragment()
-            findNavController().navigate(action2)
         }
 
         return view
     }
 
     companion object {
+
         @JvmStatic
-        fun newInstance() = HomeFragment()
+        fun newInstance(param1: String, param2: String) =
+            QRScannerFragment()
     }
 }
