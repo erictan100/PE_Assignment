@@ -12,6 +12,8 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.core.content.ContextCompat;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.google.android.material.button.MaterialButton;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +21,7 @@ public class OnBoardingActivity extends AppCompatActivity {
 
     OnBoardingAdapter onBoardingAdapter;
     LinearLayout onBoardingIndicator;
-    AppCompatButton proceed;
+    MaterialButton proceed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,12 +118,12 @@ public class OnBoardingActivity extends AppCompatActivity {
                 );
             }
         }
-        if (index == onBoardingAdapter.getItemCount() - 1){
-            proceed.setText("Start");
-        }
-        else{
-            proceed.setText("Next");
-        }
+//        if (index == onBoardingAdapter.getItemCount() - 1){
+//            proceed.setText("Start");
+//        }
+//        else{
+//            proceed.setText("Next");
+//        }
     }
 
 }

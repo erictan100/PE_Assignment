@@ -54,7 +54,7 @@ public class VaccineInformationActivity extends AppCompatActivity {
                 if (onboardingViewPager.getCurrentItem() + 1 < vaccineInfoAdapter.getItemCount()) {
                     onboardingViewPager.setCurrentItem(onboardingViewPager.getCurrentItem() + 1);
                 } else {
-                    startActivity(new Intent(getApplicationContext(), OnBoardingActivity.class));
+                    startActivity(new Intent(getApplicationContext(), VaccineActivity.class));
                     finish();
                 }
             }
@@ -132,12 +132,12 @@ public class VaccineInformationActivity extends AppCompatActivity {
                 );
             }
         }
-        if (index == vaccineInfoAdapter.getItemCount() - 1){
-            proceed.setText("Back");
-        }
-        else{
-            proceed.setText("Next");
-        }
+//        if (index == vaccineInfoAdapter.getItemCount() - 1){
+//            proceed.setText("Back");
+//        }
+//        else{
+//            proceed.setText("Next");
+//        }
     }
 
 }

@@ -15,6 +15,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:backgroundTint="@color/Middle_Green"
+        android:text="Next"
         app:cornerRadius="20dp"
         android:textSize="15sp"/>
 
