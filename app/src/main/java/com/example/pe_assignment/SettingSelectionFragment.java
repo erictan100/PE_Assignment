@@ -3,6 +3,7 @@ package com.example.pe_assignment;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
@@ -18,6 +19,8 @@ public class SettingSelectionFragment extends Fragment {
 
     private TextView tv_language, tv_about, tv_account;
     private ImageButton backButtonSetting;
+    AppCompatButton logout;
+
 
     public SettingSelectionFragment () {
         // Required empty public constructor
@@ -45,6 +48,8 @@ public class SettingSelectionFragment extends Fragment {
         tv_about = root.findViewById(R.id.tv_about);
         tv_language = root.findViewById(R.id.tv_language);
         tv_account = root.findViewById(R.id.tv_account);
+
+        logout = root.findViewById(R.id.btn_logout);
 
         backButtonSetting.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,6 +82,17 @@ public class SettingSelectionFragment extends Fragment {
                 FragmentTransaction fr = getParentFragmentManager().beginTransaction();
                 fr.replace(R.id.nav_host_fragment_activity_setting, new LanguageFragment());
                 fr.commit();
+            }
+        });
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                startActivity(intent);
+                getActivity().finish();
+
             }
         });
 
