@@ -7,16 +7,9 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.pe_assignment.initialFragment.home.HomeFragment"
+        android:name="com.example.pe_assignment.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_homeFragment_to_FAQFragment"
-            app:destination="@id/FAQFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_selfAssessmentFragment"
-            app:destination="@id/selfAssessmentFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/statisticFragment"
         android:name="com.example.pe_assignment.initialFragment.stat.StatisticFragment"
@@ -59,24 +52,6 @@
         <action
             android:id="@+id/action_mixAndMatchFragment2_to_maMgameFragment"
             app:destination="@id/maMgameFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/FAQFragment"
-        android:name="com.example.pe_assignment.initialFragment.home.FAQFragment"
-        android:label="fragment_f_a_q"
-        tools:layout="@layout/fragment_f_a_q" >
-        <action
-            android:id="@+id/action_FAQFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/selfAssessmentFragment"
-        android:name="com.example.pe_assignment.initialFragment.home.SelfAssessmentFragment"
-        android:label="fragment_self_assessment"
-        tools:layout="@layout/fragment_self_assessment" >
-        <action
-            android:id="@+id/action_selfAssessmentFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/maMgameFragment"

@@ -12,4 +12,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    //Vaccine Fragment
+    <string name="schedule_vaccine">Schedule Vaccine</string>
+    <string name="vaccine_status">Vaccine Status</string>
+    <string name="vaccine_info">Vaccine Information</string>
+
 </resources>

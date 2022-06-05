@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
 import com.example.pe_assignment.R
-import com.example.pe_assignment.initialFragment.home.HomeFragmentDirections
 
 
 class QRScannerFragment : Fragment() {

@@ -18,4 +18,11 @@
     <color name="Rifle_Green">#3F4531</color>
     <color name="light_Green">#6BDE85</color>
     <color name="Sassy_Yellow">#FFF3B7</color> <!-- light-yellow -->
+
+    <color name="font_grey">#858282</color>
+    <color name="grey">#E7E7E7</color>
+    <color name="vaccine_blue">#098FC8</color>
+    <color name="vaccine_medium_blue">#3FC6FF</color>
+    <color name="vaccine_light_blue">#93DFFF</color>
+
 </resources>
