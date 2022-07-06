@@ -5,10 +5,17 @@
       <map>
         <entry key="..\:/Users/LENOVO/Desktop/Mobile/PE_Assignment/app/src/main/res/drawable/btn_disable_tint.xml" value="0.1" />
         <entry key="..\:/Users/LENOVO/Desktop/Mobile/PE_Assignment/app/src/main/res/layout/activity_edit_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/Desktop/Mobile/PE_Assignment/app/src/main/res/layout/activity_f_a_q.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/Desktop/Mobile/PE_Assignment/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/LENOVO/Desktop/Mobile/PE_Assignment/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/LENOVO/Desktop/Mobile/PE_Assignment/app/src/main/res/layout/activity_my_reward.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/Desktop/Mobile/PE_Assignment/app/src/main/res/layout/activity_onboarding.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/LENOVO/Desktop/Mobile/PE_Assignment/app/src/main/res/layout/activity_quiz_menu.xml" value="0.264" />
+        <entry key="..\:/Users/LENOVO/Desktop/Mobile/PE_Assignment/app/src/main/res/layout/activity_register.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/Desktop/Mobile/PE_Assignment/app/src/main/res/layout/activity_schedule_vaccination.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/Desktop/Mobile/PE_Assignment/app/src/main/res/layout/activity_self_assessment.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/LENOVO/Desktop/Mobile/PE_Assignment/app/src/main/res/layout/activity_setting.xml" value="0.16168478260869565" />
+        <entry key="..\:/Users/LENOVO/Desktop/Mobile/PE_Assignment/app/src/main/res/layout/activity_vaccine.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/LENOVO/Desktop/Mobile/PE_Assignment/app/src/main/res/layout/activity_vaccine_status.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/LENOVO/Desktop/Mobile/PE_Assignment/app/src/main/res/layout/app_features_design.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/LENOVO/Desktop/Mobile/PE_Assignment/app/src/main/res/layout/digital_cert_item.xml" value="0.25416666666666665" />
@@ -19,10 +26,11 @@
         <entry key="..\:/Users/LENOVO/Desktop/Mobile/PE_Assignment/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/LENOVO/Desktop/Mobile/PE_Assignment/app/src/main/res/layout/fragment_language.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/LENOVO/Desktop/Mobile/PE_Assignment/app/src/main/res/layout/fragment_ma_mgame.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/Desktop/Mobile/PE_Assignment/app/src/main/res/layout/fragment_mix_and_match.xml" value="0.25181159420289856" />
         <entry key="..\:/Users/LENOVO/Desktop/Mobile/PE_Assignment/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
         <entry key="..\:/Users/LENOVO/Desktop/Mobile/PE_Assignment/app/src/main/res/layout/fragment_quiz_end.xml" value="0.3113207547169811" />
         <entry key="..\:/Users/LENOVO/Desktop/Mobile/PE_Assignment/app/src/main/res/layout/fragment_quiz_game.xml" value="0.3126315789473684" />
-        <entry key="..\:/Users/LENOVO/Desktop/Mobile/PE_Assignment/app/src/main/res/layout/fragment_quiz_instruction.xml" value="0.46356275303643724" />
+        <entry key="..\:/Users/LENOVO/Desktop/Mobile/PE_Assignment/app/src/main/res/layout/fragment_quiz_instruction.xml" value="0.264" />
         <entry key="..\:/Users/LENOVO/Desktop/Mobile/PE_Assignment/app/src/main/res/layout/fragment_reward_active.xml" value="0.4" />
         <entry key="..\:/Users/LENOVO/Desktop/Mobile/PE_Assignment/app/src/main/res/layout/fragment_reward_redeemed.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/LENOVO/Desktop/Mobile/PE_Assignment/app/src/main/res/layout/fragment_reward_rexpired.xml" value="0.25416666666666665" />
