@@ -10,10 +10,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class LanguageFragment extends Fragment {
 
     private ImageButton backButtonLanguage;
+    private TextView English, Chinese, Malay;
 
     public LanguageFragment() {
         // Required empty public constructor
@@ -43,6 +46,31 @@ public class LanguageFragment extends Fragment {
                 FragmentTransaction fr = getParentFragmentManager().beginTransaction();
                 fr.replace(R.id.nav_host_fragment_activity_setting, new SettingSelectionFragment());
                 fr.commit();
+            }
+        });
+
+        English = root.findViewById(R.id.language_English);
+        Chinese = root.findViewById(R.id.language_Chinese);
+        Malay = root.findViewById(R.id.language_Malay);
+
+        English.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View view) {
+                Toast.makeText(getContext(),"Language Applied", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        Chinese.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View view) {
+                Toast.makeText(getContext(),"Not Support in Current Version", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        Malay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View view) {
+                Toast.makeText(getContext(),"Not Support in Current Version", Toast.LENGTH_SHORT).show();
             }
         });
 

@@ -36,6 +36,7 @@
                     android:layout_marginTop="70dp"
                     android:text="Congratulation"
                     android:textColor="@color/black"
+                    android:fontFamily="@font/lemon"
                     android:textSize="@dimen/titleTextSize"
                     android:textStyle="bold" />
 
@@ -46,9 +47,9 @@
                     android:layout_below="@id/tv_congratulation"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
+                    android:fontFamily="@font/imprima"
                     android:text="You got 6/10 question right"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"/>
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/textView2"
@@ -58,8 +59,8 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:text="You have earned"
-                    android:textColor="@color/black"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:fontFamily="@font/imprima"/>
 
                 <TextView
                     android:id="@+id/tv_pointEarnedEnd"
@@ -69,7 +70,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
                     android:text="30"
-                    android:textColor="@color/black"
+                    android:fontFamily="@font/lemon"
                     android:textSize="@dimen/titleTextSize"
                     android:textStyle="bold|italic" />
 
@@ -81,7 +82,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
                     android:text="Points"
-                    android:textColor="@color/black"
+                    android:fontFamily="@font/lemon"
                     android:textSize="20sp" />
 
             </RelativeLayout>

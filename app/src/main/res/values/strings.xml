@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">PE_Assignment</string>
     <string name="copyright">Copyright 2022-2023 \n SWE401 Embedded Programming \n Group WEP \n All Right Reserved</string>
-    <string name="no_language">Currently our application only support for English version. Sorry for any inconvenience</string>
+    <string name="no_language">Currently our application only support for English version. \nSorry for any inconvenience</string>
 
     <string-array name="state">
         <item>Selangor</item>

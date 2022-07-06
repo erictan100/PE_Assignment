@@ -40,6 +40,7 @@
             android:textColor="@color/black"
             android:textSize="@dimen/titleTextSize"
             android:textStyle="bold"
+            android:fontFamily="@font/lemon"
             app:layout_constraintBottom_toBottomOf="@+id/top_background"
             app:layout_constraintEnd_toEndOf="@+id/top_background"
             app:layout_constraintHorizontal_bias="0.08"

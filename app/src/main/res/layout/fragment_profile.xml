@@ -14,9 +14,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Profile"
-            android:textColor="@color/black"
             android:textSize="35sp"
             android:textStyle="bold"
+            android:fontFamily="@font/lemon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +78,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Desmond Shin"
-                        android:textColor="@color/black"
                         android:textSize="@dimen/titleTextSize"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -161,7 +160,7 @@
                                 android:layout_width="150dp"
                                 android:layout_height="wrap_content"
                                 android:text="IC/Passport No."
-                                android:textColor="@color/black"
+                                android:fontFamily="@font/imprima"
                                 android:textStyle="bold"
                                 android:textSize="@dimen/hintTextSize"/>
                             <TextView
@@ -169,7 +168,7 @@
                                 android:layout_width="150dp"
                                 android:layout_height="wrap_content"
                                 android:text="xxxxxx-xx-xxxx"
-                                android:textColor="@color/black"
+
                                 android:textSize="@dimen/hintTextSize"
                                 android:gravity="right"/>
                         </TableRow>
@@ -182,14 +181,14 @@
                                 android:layout_height="wrap_content"
                                 android:text="D.O.B"
                                 android:textStyle="bold"
-                                android:textColor="@color/black"
+                                android:fontFamily="@font/imprima"
                                 android:textSize="@dimen/hintTextSize"/>
                             <TextView
                                 android:id="@+id/profile_DOB"
                                 android:layout_width="150dp"
                                 android:layout_height="wrap_content"
                                 android:text="DD/MM/YYYY"
-                                android:textColor="@color/black"
+
                                 android:textSize="@dimen/hintTextSize"
                                 android:gravity="right"/>
                         </TableRow>
@@ -202,14 +201,14 @@
                                 android:layout_height="wrap_content"
                                 android:text="Email"
                                 android:textStyle="bold"
-                                android:textColor="@color/black"
+                                android:fontFamily="@font/imprima"
                                 android:textSize="@dimen/hintTextSize"/>
                             <TextView
                                 android:id="@+id/profile_email"
                                 android:layout_width="150dp"
                                 android:layout_height="wrap_content"
                                 android:text="DD/MM/YYYY"
-                                android:textColor="@color/black"
+
                                 android:textSize="@dimen/hintTextSize"
                                 android:gravity="right"/>
                         </TableRow>
@@ -222,14 +221,14 @@
                                 android:layout_height="wrap_content"
                                 android:text="Phone Number"
                                 android:textStyle="bold"
-                                android:textColor="@color/black"
+                                android:fontFamily="@font/imprima"
                                 android:textSize="@dimen/hintTextSize"/>
                             <TextView
                                 android:id="@+id/profile_phoneNumber"
                                 android:layout_width="150dp"
                                 android:layout_height="wrap_content"
                                 android:text="xxx-xxxxxxxxxx"
-                                android:textColor="@color/black"
+
                                 android:textSize="@dimen/hintTextSize"
                                 android:gravity="right"/>
                         </TableRow>
@@ -242,14 +241,14 @@
                                 android:layout_height="wrap_content"
                                 android:text="D.O.B"
                                 android:textStyle="bold"
-                                android:textColor="@color/black"
+                                android:fontFamily="@font/imprima"
                                 android:textSize="@dimen/hintTextSize"/>
                             <TextView
                                 android:id="@+id/profile_state"
                                 android:layout_width="150dp"
                                 android:layout_height="wrap_content"
                                 android:text="Selangor"
-                                android:textColor="@color/black"
+
                                 android:textSize="@dimen/hintTextSize"
                                 android:gravity="right"/>
                         </TableRow>
@@ -283,7 +282,7 @@
                         android:id="@+id/guardImage"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:layout_marginStart="35dp"
+                        android:layout_marginStart="10dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/guard"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -299,6 +298,7 @@
                         android:textColor="@color/white"
                         android:textSize="@dimen/hintTextSize"
                         android:textStyle="bold"
+                        android:fontFamily="@font/lemon"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.3"
@@ -313,6 +313,7 @@
                         android:text="Low Risk"
                         android:textColor="@color/white"
                         android:textSize="18sp"
+                        android:fontFamily="@font/imprima"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
@@ -352,7 +353,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
                         android:text="Digital Certificate"
-                        android:textColor="@color/black"
+                        android:fontFamily="@font/lemon"
                         android:textSize="32sp"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -364,7 +365,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="for COVID-19 Vaccination"
-                        android:textColor="@color/black"
+                        android:fontFamily="@font/imprima"
                         android:textSize="@dimen/hintTextSize"
                         android:textStyle="italic"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -375,7 +376,7 @@
                         android:id="@+id/view_certLine"
                         android:layout_width="match_parent"
                         android:layout_height="2dp"
-                        android:background="@color/black"
+
                         android:layout_marginTop="10dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -387,7 +388,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
                         android:text="Desmond Shin"
-                        android:textColor="@color/black"
+
                         android:textSize="@dimen/normalTextSize"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -399,7 +400,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="xxxxxx-xx-xxxx"
-                        android:textColor="@color/black"
+
                         android:textSize="@dimen/normalTextSize"
                         android:textStyle="bold|italic"
                         app:layout_constraintEnd_toEndOf="parent"

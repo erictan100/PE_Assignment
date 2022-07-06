@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="Baskin-Robbins RM3.10 cashback voucher! Min spend of RM31"
-            android:textColor="@color/dark_grey"
+
             android:textSize="@dimen/hintTextSize"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:text="20 Sept - 20 Nov 2022"
             android:textSize="14sp"
-            android:textColor="@color/dark_grey"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +61,6 @@
             android:layout_marginTop="15dp"
             android:text="200 \n points"
             android:textAlignment="center"
-            android:textColor="@color/dark_grey"
             android:textSize="@dimen/normalTextSize"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -69,14 +68,13 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_redeem4"
+            android:id="@+id/btn_redeem5"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:backgroundTint="@color/dark_grey"
             android:background="@drawable/button_background"
             android:text="Claim"
             android:textAllCaps="false"
-            android:textColor="@color/light_grey"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

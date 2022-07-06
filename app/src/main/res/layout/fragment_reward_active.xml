@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    android:id="@+id/scrollViewReward"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -47,13 +49,27 @@
                     android:id="@+id/redemption_duration1"
                     android:layout_width="220dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:text="20 Sept - 20 Nov 2022"
-                    android:textSize="14sp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/imprima"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/redemption_details1" />
+
+                <TextView
+                    android:id="@+id/redemption_count1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 Redemptions"
+                    android:fontFamily="@font/imprima"
+                    android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.111"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintHorizontal_bias="0.2"
-                    app:layout_constraintTop_toBottomOf="@+id/redemption_details1" />
+                    app:layout_constraintTop_toBottomOf="@+id/redemption_duration1" />
 
                 <View
                     android:id="@+id/view"
@@ -102,7 +118,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cv_reward2"
             android:layout_width="match_parent"
-            android:layout_height="130dp"
+            android:layout_height="140dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"
             android:layout_marginHorizontal="15dp"
@@ -134,12 +150,25 @@
                     android:layout_width="220dp"
                     android:layout_height="wrap_content"
                     android:text="20 Sept - 20 Nov 2022"
-                    android:textSize="14sp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/imprima"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/redemption_details2" />
+
+                <TextView
+                    android:id="@+id/redemption_count2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 Redemptions"
+                    android:fontFamily="@font/imprima"
+                    android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.111"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintHorizontal_bias="0.2"
-                    app:layout_constraintTop_toBottomOf="@+id/redemption_details2" />
+                    app:layout_constraintTop_toBottomOf="@+id/redemption_duration2" />
 
                 <View
                     android:id="@+id/view2"
@@ -188,7 +217,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cv_reward3"
             android:layout_width="match_parent"
-            android:layout_height="130dp"
+            android:layout_height="140dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"
             android:layout_marginHorizontal="15dp"
@@ -220,12 +249,25 @@
                     android:layout_width="220dp"
                     android:layout_height="wrap_content"
                     android:text="20 Sept - 20 Nov 2022"
-                    android:textSize="14sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/imprima"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintHorizontal_bias="0.2"
                     app:layout_constraintTop_toBottomOf="@+id/redemption_details3" />
+
+                <TextView
+                    android:id="@+id/redemption_count3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 Redemptions"
+                    android:fontFamily="@font/imprima"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.111"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/redemption_duration3" />
 
                 <View
                     android:id="@+id/view3"
@@ -306,12 +348,27 @@
                     android:layout_width="220dp"
                     android:layout_height="wrap_content"
                     android:text="20 Sept - 20 Nov 2022"
-                    android:textSize="14sp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/imprima"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintHorizontal_bias="0.2"
                     app:layout_constraintTop_toBottomOf="@+id/redemption_details4" />
+
+                <TextView
+                    android:id="@+id/redemption_count4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 Redemptions"
+                    android:fontFamily="@font/imprima"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.111"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/redemption_duration4" />
+
 
                 <View
                     android:id="@+id/view4"
@@ -363,7 +420,7 @@
             android:layout_marginBottom="25dp">
 
             <View
-                android:layout_width="120sp"
+                android:layout_width="90sp"
                 android:layout_height="1dp"
                 android:background="@color/light_grey"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -376,6 +433,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="No more vouchers"
+                android:fontFamily="@font/lemon"
                 android:textColor="@color/light_grey"
                 android:textSize="@dimen/hintTextSize"
                 android:textStyle="bold|italic"
@@ -385,7 +443,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <View
-                android:layout_width="120sp"
+                android:layout_width="90sp"
                 android:layout_height="1dp"
                 android:background="@color/light_grey"
                 app:layout_constraintBottom_toBottomOf="parent"

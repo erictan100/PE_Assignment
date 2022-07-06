@@ -58,7 +58,9 @@ public class ProfileFragment extends Fragment {
 
         ArrayList<DigitalCertHelper> digitalCertInfo = new ArrayList<>();
 
-        digitalCertInfo.add(new DigitalCertHelper("Dose 1:", "Date: DD/MM/YYYY", "Time: HH:MM","Vaccination Type: Sinovac/Pfizer","Facility: Clinic","Batch Number: 01234567"));
+        digitalCertInfo.add(new DigitalCertHelper("Dose 1:", "Date: 12/05/2021", "Time: 13:55","Vaccination Type: Sinovac","Facility: Clinic","Batch Number: 01234567"));
+        digitalCertInfo.add(new DigitalCertHelper("Dose 2:", "Date: 15/08/2021", "Time: 15:30","Vaccination Type: Sinovac","Facility: Clinic","Batch Number: 52123456"));
+        digitalCertInfo.add(new DigitalCertHelper("Dose 3:", "Date: 25/11/2021", "Time: 10:30","Vaccination Type: Pfizer","Facility: Clinic","Batch Number: 45682349"));
 
         adapter = new DigitalCertAdapter(digitalCertInfo);
 

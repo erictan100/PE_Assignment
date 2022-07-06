@@ -3,7 +3,9 @@ package com.example.pe_assignment;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
@@ -12,11 +14,13 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class SettingSelectionFragment extends Fragment {
 
+    private SwitchCompat darkModeSw;
     private TextView tv_language, tv_about, tv_account;
     private ImageButton backButtonSetting;
     AppCompatButton logout;
@@ -44,6 +48,7 @@ public class SettingSelectionFragment extends Fragment {
         // Inflate the layout for this fragment
         View root =  inflater.inflate(R.layout.fragment_setting_selection, container, false);
 
+        darkModeSw = root.findViewById(R.id.darkModeSw);
         backButtonSetting = root.findViewById(R.id.backButtonSetting);
         tv_about = root.findViewById(R.id.tv_about);
         tv_language = root.findViewById(R.id.tv_language);
@@ -95,6 +100,20 @@ public class SettingSelectionFragment extends Fragment {
 
             }
         });
+
+        darkModeSw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged (CompoundButton compoundButton, boolean isChecked) {
+                if(isChecked){
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                }
+                else
+                {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                }
+            }
+        });
+
 
         return root;
     }

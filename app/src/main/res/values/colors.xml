@@ -25,4 +25,7 @@
     <color name="vaccine_medium_blue">#3FC6FF</color>
     <color name="vaccine_light_blue">#93DFFF</color>
 
+
+    <color name="btn_disable_color">#59534848</color>
+
 </resources>
