@@ -1,170 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".LoginActivity"
-    android:background="@drawable/background">
+    tools:context=".LoginActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_centerHorizontal="true"
-            android:scaleType="centerCrop"
-            android:src="@drawable/weplogo" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/nav_userPhoto"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="25dp">
+        android:src="@drawable/userphoto"
+        app:layout_constraintBottom_toTopOf="@+id/login_IC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/txt_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/lemon"
-            android:text="Login"
-            android:textColor="@color/black"
-            android:textSize="26sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/txt_login"
-            android:layout_marginTop="5dp"
-            android:fontFamily="@font/imprima"
-            android:text="To continue to our application"
-            android:textSize="20sp" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_IC"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="20dp"
+        android:layout_width="265dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginTop="40dp">
+        android:ems="10"
+        android:fontFamily="@font/imprima"
+        android:hint="IC / Passport NO"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent">
 
-        <EditText
-            android:id="@+id/edittxt_ic"
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/login_edittext_bg"
-            android:elevation="10dp"
-            android:fontFamily="@font/imprima"
-            android:hint="IC/Passport No."
-            android:padding="15dp"
-            android:textColorHint="@color/white"
-            android:textSize="20sp"
-            android:textStyle="italic" />
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            android:id="@+id/edittxt_password"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/loginPass"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="265dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/imprima"
+        android:hint="Password"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_IC" >
+
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/edittxt_ic"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/login_edittext_bg"
-            android:elevation="10dp"
-            android:fontFamily="@font/imprima"
-            android:hint="Password"
-            android:padding="15dp"
-            android:textColorHint="@color/white"
-            android:textSize="20sp"
-            android:textStyle="italic" />
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/edittxt_password"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/login_btn_bg"
-            android:fontFamily="@font/lemon"
-            android:text="Login"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginTop="15dp">
+        android:onClick="LoginUser"
+        android:text="Login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginPass"
+        app:layout_constraintVertical_bias="0.29000002" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/imprima"
-            android:text="No Account?"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/txt_register"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:fontFamily="@font/imprima"
-            android:text="Register Now"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="25dp"
-        android:layout_marginTop="30dp">
+        app:layout_constraintBottom_toBottomOf="@+id/btn_login"
+        app:layout_constraintEnd_toEndOf="@+id/btn_login"
+        app:layout_constraintStart_toStartOf="@+id/btn_login"
+        app:layout_constraintTop_toTopOf="@+id/btn_login" />
 
-        <TextView
-            android:id="@+id/txt_otherloginoption"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:fontFamily="@font/lemon"
-            android:text="or Login with"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lemon"
+        android:text="Register by clicking on the Profile Image"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/login_IC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nav_userPhoto"
+        app:layout_constraintVertical_bias="0.16000003" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_twitter"
-            android:layout_width="165dp"
-            android:layout_height="50dp"
-            android:layout_below="@id/txt_otherloginoption"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/otherloginoption_btn_bg"
-            android:backgroundTint="#3FCCDF"
-            android:elevation="10dp"
-            android:fontFamily="@font/imprima"
-            android:text="Twitter"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_twitter"
+        android:layout_width="120dp"
+        android:layout_height="48dp"
+        android:background="@drawable/otherloginoption_btn_bg"
+        android:backgroundTint="#3FCCDF"
+        android:elevation="10dp"
+        android:fontFamily="@font/lemon"
+        android:text="Twitter"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login"
+        app:layout_constraintVertical_bias="0.25" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_facebook"
-            android:layout_width="165dp"
-            android:layout_height="50dp"
-            android:layout_below="@id/txt_otherloginoption"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/otherloginoption_btn_bg"
-            android:backgroundTint="#3093EF"
-            android:elevation="10dp"
-            android:fontFamily="@font/imprima"
-            android:text="Facebook"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
-</LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_facebook"
+        android:layout_width="120dp"
+        android:layout_height="48dp"
+        android:background="@drawable/otherloginoption_btn_bg"
+        android:backgroundTint="#4267B2"
+        android:elevation="10dp"
+        android:fontFamily="@font/lemon"
+        android:text="Facebook"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login"
+        app:layout_constraintVertical_bias="0.25" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

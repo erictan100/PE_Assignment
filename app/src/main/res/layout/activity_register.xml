@@ -8,7 +8,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/background"
         android:orientation="vertical">
 
         <RelativeLayout
@@ -58,129 +57,146 @@
             android:layout_marginHorizontal="50dp"
             android:layout_marginTop="30dp">
 
-            <EditText
-                android:id="@+id/edittxt_email"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/reg_email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/login_edittext_bg"
-                android:elevation="10dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="@font/imprima"
                 android:hint="Email"
-                android:padding="15dp"
-                android:textColorHint="@color/white"
-                android:textSize="20sp"
-                android:textStyle="italic" />
+                android:textColorHint="@color/black">
 
-            <EditText
-                android:id="@+id/edittxt_name"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/reg_name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/edittxt_email"
+                android:layout_below="@id/reg_email"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/login_edittext_bg"
-                android:elevation="10dp"
                 android:fontFamily="@font/imprima"
-                android:hint="Name (as per IC)"
-                android:padding="15dp"
-                android:textColorHint="@color/white"
-                android:textSize="20sp"
-                android:textStyle="italic" />
+                android:hint="Name (per IC)"
+                android:textColorHint="@color/black">>
 
-            <EditText
-                android:id="@+id/edittxt_ic"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/reg_ic"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/edittxt_name"
+                android:layout_below="@id/reg_name"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/login_edittext_bg"
-                android:elevation="10dp"
                 android:fontFamily="@font/imprima"
-                android:hint="IC/Passport No."
-                android:padding="15dp"
-                android:textColorHint="@color/white"
-                android:textSize="20sp"
-                android:textStyle="italic" />
+                android:hint="IC / Passport No"
+                android:textColorHint="@color/black">>
 
-            <EditText
-                android:id="@+id/edittxt_dob"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/reg_dob"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/edittxt_ic"
+                android:layout_below="@id/reg_ic"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/login_edittext_bg"
-                android:elevation="10dp"
                 android:fontFamily="@font/imprima"
                 android:hint="D.O.B"
-                android:padding="15dp"
-                android:textColorHint="@color/white"
-                android:textSize="20sp"
-                android:textStyle="italic" />
+                android:textColorHint="@color/black">>
 
-            <EditText
-                android:id="@+id/edittxt_address"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/reg_address"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/edittxt_dob"
+                android:layout_below="@id/reg_dob"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/login_edittext_bg"
-                android:elevation="10dp"
                 android:fontFamily="@font/imprima"
                 android:hint="Address"
-                android:padding="15dp"
-                android:textColorHint="@color/white"
-                android:textSize="20sp"
-                android:textStyle="italic" />
+                android:textColorHint="@color/black">>
 
-            <EditText
-                android:id="@+id/edittxt_state"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/reg_state"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/edittxt_address"
+                android:layout_below="@id/reg_address"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/login_edittext_bg"
-                android:elevation="10dp"
                 android:fontFamily="@font/imprima"
                 android:hint="State"
-                android:padding="15dp"
-                android:textColorHint="@color/white"
-                android:textSize="20sp"
-                android:textStyle="italic" />
+                android:textColorHint="@color/black">>
 
-            <EditText
-                android:id="@+id/edittxt_phone"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/reg_phoneNo"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/edittxt_state"
+                android:layout_below="@id/reg_state"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/login_edittext_bg"
-                android:elevation="10dp"
                 android:fontFamily="@font/imprima"
                 android:hint="Phone Number"
-                android:padding="15dp"
-                android:textColorHint="@color/white"
-                android:textSize="20sp"
-                android:textStyle="italic" />
+                android:textColorHint="@color/black">>
 
-            <EditText
-                android:id="@+id/edittxt_password"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/reg_pwd"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/edittxt_phone"
+                android:layout_below="@id/reg_phoneNo"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/login_edittext_bg"
-                android:elevation="10dp"
                 android:fontFamily="@font/imprima"
                 android:hint="Password"
-                android:padding="15dp"
-                android:textColorHint="@color/white"
-                android:textSize="20sp"
-                android:textStyle="italic" />
+                android:textColorHint="@color/black">>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <RelativeLayout
                 android:id="@+id/rl_terms"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/edittxt_password"
+                android:layout_below="@id/reg_pwd"
                 android:layout_marginTop="20dp">
 
                 <CheckBox
@@ -211,6 +227,7 @@
                 android:layout_marginBottom="80dp"
                 android:background="@drawable/login_btn_bg"
                 android:fontFamily="@font/lemon"
+                android:onClick="RegisterUser"
                 android:text="Register"
                 android:textColor="@color/white"
                 android:textSize="20sp" />

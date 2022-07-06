@@ -3,17 +3,32 @@ package com.example.pe_assignment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
+import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+
 public class LoginActivity extends AppCompatActivity {
 
-    EditText ic, pwd;
-    TextView register;
-    AppCompatButton login, twitter, facebook;
+    TextInputLayout ic, pwd;
+    ImageView register;
+    Button login;
+    ProgressBar progressBar;
+    AppCompatButton twitter, facebook;
 
 
     @Override
@@ -21,14 +36,16 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        ic = findViewById(R.id.edittxt_ic);
-        pwd = findViewById(R.id.edittxt_password);
-        register = findViewById(R.id.txt_register);
+        ic = findViewById(R.id.login_IC);
+        pwd = findViewById(R.id.loginPass);
+        register = findViewById(R.id.nav_userPhoto);
+        progressBar = findViewById(R.id.progressBar);
 
         login = findViewById(R.id.btn_login);
         twitter = findViewById(R.id.btn_twitter);
         facebook = findViewById(R.id.btn_facebook);
 
+        progressBar.setVisibility(View.INVISIBLE);
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,15 +56,117 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        login.setOnClickListener(new View.OnClickListener() {
+    }
+    public void LoginUser(View view){
+
+        if (!validateIC() | !validatePassword()) {
+            return;
+        }
+        else{
+            Login();
+        }
+
+    }
+
+    private void Login() {
+
+        final String userIC = ic.getEditText().getText().toString().trim();
+        final String userPassword = pwd.getEditText().getText().toString().trim();
+
+        progressBar.setVisibility(View.VISIBLE);
+        login.setVisibility(View.INVISIBLE);
+
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
+
+        Query checkUser = reference.orderByChild("ic").equalTo(userIC);
+
+        checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-                finish();
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                if(snapshot.exists()){
+
+                    ic.setError(null);
+                    ic.setErrorEnabled(false);
+
+                    String passwordFromDB = snapshot.child(userIC).child("pwd").getValue(String.class);
+
+                    if(passwordFromDB.equals(userPassword)){
+
+                        ic.setError(null);
+                        ic.setErrorEnabled(false);
+
+                        String icFromDB = snapshot.child(userIC).child("ic").getValue(String.class);
+                        String nameFromDB = snapshot.child(userIC).child("name").getValue(String.class);
+                        String emailFromDB = snapshot.child(userIC).child("email").getValue(String.class);
+                        String phoneNoFromDB = snapshot.child(userIC).child("phoneNo").getValue(String.class);
+                        String addressFromDB = snapshot.child(userIC).child("address").getValue(String.class);
+                        String stateFromDB = snapshot.child(userIC).child("state").getValue(String.class);
+                        String dobFromDB = snapshot.child(userIC).child("dob").getValue(String.class);
+
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+
+                        intent.putExtra("ic", icFromDB);
+                        intent.putExtra("name", nameFromDB);
+                        intent.putExtra("email", emailFromDB);
+                        intent.putExtra("phoneNo", phoneNoFromDB);
+                        intent.putExtra("address", addressFromDB);
+                        intent.putExtra("state", stateFromDB);
+                        intent.putExtra("dob", dobFromDB);
+                        intent.putExtra("dob", passwordFromDB);
+
+                        startActivity(intent);
+                        finish();
+                    }
+                    else{
+                        login.setVisibility(View.VISIBLE);
+                        progressBar.setVisibility(View.INVISIBLE);
+                        pwd.setError("Wrong Password");
+                        pwd.requestFocus();
+
+                    }
+                }
+                else{
+
+                    ic.setError("No suc User exist");
+                    ic.requestFocus();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
 
             }
         });
-
     }
+
+    private boolean validatePassword() {
+        String value = pwd.getEditText().getText().toString();
+
+        if (value.isEmpty()) {
+            pwd.setError("Field cannot be empty");
+            return false;
+        }
+        else {
+            pwd.setError(null);
+            pwd.setErrorEnabled(false);
+            return true;
+        }
+    }
+
+    private boolean validateIC() {
+        String value = ic.getEditText().getText().toString();
+
+        if (value.isEmpty()) {
+            ic.setError("Field cannot be empty");
+            return false;
+        }
+        else {
+            ic.setError(null);
+            ic.setErrorEnabled(false);
+            return true;
+        }
+    }
+
 }
+
