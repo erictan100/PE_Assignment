@@ -1,5 +1,8 @@
 package com.example.pe_assignment.initialFragment.profile;
 
+import static com.example.pe_assignment.LoginActivity.userID;
+
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,10 +15,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.pe_assignment.DigitalCertAdapter;
 import com.example.pe_assignment.DigitalCertHelper;
 import com.example.pe_assignment.R;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -23,6 +32,11 @@ public class ProfileFragment extends Fragment {
 
     RecyclerView digitalCert;
     RecyclerView.Adapter adapter;
+    private TextView ic, dob, email, state, phoneNo;
+
+    String emailDB, phoneNoDB, stateDB, dobDB, icDB;
+
+    DatabaseReference reference;
 
     public ProfileFragment(){
 
@@ -43,6 +57,36 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_profile, container, false);
+
+        ic = root.findViewById(R.id.profile_icNumber);
+        dob = root.findViewById(R.id.profile_DOB);
+        email = root.findViewById(R.id.profile_email);
+        state = root.findViewById(R.id.profile_state);
+        phoneNo = root.findViewById(R.id.profile_phoneNumber);
+
+        reference = FirebaseDatabase.getInstance().getReference("users");
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                icDB = snapshot.child(userID).child("ic").getValue(String.class);
+                emailDB = snapshot.child(userID).child("email").getValue(String.class);
+                phoneNoDB = snapshot.child(userID).child("phoneNo").getValue(String.class);
+                stateDB = snapshot.child(userID).child("state").getValue(String.class);
+                dobDB = snapshot.child(userID).child("dob").getValue(String.class);
+
+                email.setText(emailDB);
+                state.setText(stateDB);
+                dob.setText(dobDB);
+                phoneNo.setText(phoneNoDB);
+                ic.setText(icDB);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         digitalCert = root.findViewById(R.id.recycleView_DigitalCert);
         digitalCert();

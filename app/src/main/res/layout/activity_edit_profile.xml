@@ -75,16 +75,23 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatEditText
+                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/et_profileName"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/imprima"
                     android:hint="Name"
+                    android:layout_marginHorizontal="25dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView1" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView1">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
                     android:id="@+id/textView2"
@@ -100,16 +107,19 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/et_profileName" />
 
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/et_passport"
+                <TextView
+                    android:id="@+id/txt_IC"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="25dp"
-                    android:hint="IC/Passport"
+                    android:layout_marginHorizontal="25dp"
+                    android:fontFamily="@font/imprima"
+                    android:layout_marginTop="5dp"
+                    android:textSize="22sp"
+                    android:textColorHint="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView2">
+                </TextView>
 
                 <RadioGroup
                     android:id="@+id/radioGroup_gender"
@@ -121,7 +131,7 @@
                     android:orientation="horizontal"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/et_passport">
+                    app:layout_constraintTop_toBottomOf="@+id/txt_IC">
 
                     <RadioButton
                         android:id="@+id/radioBtn_Male"
@@ -197,16 +207,23 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/et_DOB" />
 
-                <androidx.appcompat.widget.AppCompatEditText
+                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/et_address"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="25dp"
+                    android:layout_marginHorizontal="25dp"
+                    android:fontFamily="@font/imprima"
                     android:hint="Address"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
                     android:id="@+id/textView5"
@@ -224,19 +241,20 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/state"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="25dp"
+                    android:layout_marginHorizontal="25dp"
+                    android:fontFamily="@font/imprima"
+                    android:hint="State"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView5">
 
-                    <Spinner
-                        android:id="@+id/spinner"
+                    <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
-
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
@@ -253,16 +271,23 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/state" />
 
-                <androidx.appcompat.widget.AppCompatEditText
+                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/et_email"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="25dp"
-                    android:hint="example@example.com"
+                    android:layout_marginHorizontal="25dp"
+                    android:fontFamily="@font/imprima"
+                    android:hint="Email"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
                     android:id="@+id/textView7"
@@ -278,16 +303,23 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/et_email" />
 
-                <androidx.appcompat.widget.AppCompatEditText
+                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/et_phoneNumber"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="25dp"
-                    android:hint="012-3456789"
+                    android:layout_marginHorizontal="25dp"
+                    android:fontFamily="@font/imprima"
+                    android:hint="Phone No"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView7">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
                     android:id="@+id/textView8"
@@ -297,37 +329,44 @@
                     android:layout_marginLeft="25dp"
                     android:layout_marginRight="25dp"
                     android:text="Password*"
-                    android:textColor="@color/black"
                     android:textSize="@dimen/normalTextSize"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/et_phoneNumber" />
 
-                <androidx.appcompat.widget.AppCompatEditText
+                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/et_password"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="25dp"
-                    android:hint="minimum 8 characters"
+                    android:layout_marginHorizontal="25dp"
+                    android:fontFamily="@font/imprima"
+                    android:hint="Password"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_saveProfile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="40dp"
                     android:layout_marginLeft="24dp"
+                    android:layout_marginTop="40dp"
                     android:layout_marginRight="24dp"
                     android:layout_marginBottom="30dp"
+                    android:background="@drawable/button_background"
+                    android:onClick="UpdateUserInfo"
                     android:text="Save"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textSize="@dimen/normalTextSize"
                     android:textStyle="bold"
-                    android:background="@drawable/button_background"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

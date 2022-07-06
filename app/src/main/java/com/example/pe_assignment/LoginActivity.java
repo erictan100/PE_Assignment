@@ -30,6 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     ProgressBar progressBar;
     AppCompatButton twitter, facebook;
 
+    public static String userID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,31 +90,16 @@ public class LoginActivity extends AppCompatActivity {
                     ic.setError(null);
                     ic.setErrorEnabled(false);
 
+                    userID = userIC;
+
                     String passwordFromDB = snapshot.child(userIC).child("pwd").getValue(String.class);
 
                     if(passwordFromDB.equals(userPassword)){
 
                         ic.setError(null);
                         ic.setErrorEnabled(false);
-
-                        String icFromDB = snapshot.child(userIC).child("ic").getValue(String.class);
-                        String nameFromDB = snapshot.child(userIC).child("name").getValue(String.class);
-                        String emailFromDB = snapshot.child(userIC).child("email").getValue(String.class);
-                        String phoneNoFromDB = snapshot.child(userIC).child("phoneNo").getValue(String.class);
-                        String addressFromDB = snapshot.child(userIC).child("address").getValue(String.class);
-                        String stateFromDB = snapshot.child(userIC).child("state").getValue(String.class);
-                        String dobFromDB = snapshot.child(userIC).child("dob").getValue(String.class);
-
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
 
-                        intent.putExtra("ic", icFromDB);
-                        intent.putExtra("name", nameFromDB);
-                        intent.putExtra("email", emailFromDB);
-                        intent.putExtra("phoneNo", phoneNoFromDB);
-                        intent.putExtra("address", addressFromDB);
-                        intent.putExtra("state", stateFromDB);
-                        intent.putExtra("dob", dobFromDB);
-                        intent.putExtra("dob", passwordFromDB);
 
                         startActivity(intent);
                         finish();

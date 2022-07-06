@@ -115,7 +115,7 @@
                 android:layout_below="@id/reg_ic"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/imprima"
-                android:hint="D.O.B"
+                android:hint="D.O.B (dd/mm/yyyy)"
                 android:textColorHint="@color/black">>
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -149,7 +149,7 @@
                 android:layout_below="@id/reg_address"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/imprima"
-                android:hint="State"
+                android:hint="State (Melaka/Kuala Lumpur..."
                 android:textColorHint="@color/black">>
 
                 <com.google.android.material.textfield.TextInputEditText
