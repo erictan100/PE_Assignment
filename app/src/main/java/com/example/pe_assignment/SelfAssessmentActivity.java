@@ -70,6 +70,45 @@ public class SelfAssessmentActivity extends AppCompatActivity {
                 reference.child(userID).child("q3").setValue(r3.getText().toString());
                 reference.child(userID).child("q4").setValue(r4.getText().toString());
 
+                if(r1.getText().toString().equals("Yes") && r2.getText().toString().equals("Yes") && r3.getText().toString().equals("Yes") && r4.getText().toString().equals("Yes")){
+
+                    String RiskStatus = "High";
+                }
+                else if (r1.getText().toString().equals("Yes") && r2.getText().toString().equals("Yes") && r3.getText().toString().equals("Yes") && r4.getText().toString().equals("No")){
+
+                    String RiskStatus = "High";
+                }
+                else if (r1.getText().toString().equals("Yes") && r2.getText().toString().equals("Yes") && r3.getText().toString().equals("No") && r4.getText().toString().equals("Yes")){
+
+                    String RiskStatus = "High";
+                }
+                else if (r1.getText().toString().equals("Yes") && r2.getText().toString().equals("No") && r3.getText().toString().equals("Yes") && r4.getText().toString().equals("Yes")){
+
+                    String RiskStatus = "High";
+                }
+                else if (r1.getText().toString().equals("No") && r2.getText().toString().equals("Yes") && r3.getText().toString().equals("Yes") && r4.getText().toString().equals("Yes")){
+
+                    String RiskStatus = "High";
+                }
+                else if(r1.getText().toString().equals("Yes") && r2.getText().toString().equals("Yes") && r3.getText().toString().equals("No") && r4.getText().toString().equals("No")){
+                    String RiskStatus = "Medium";
+                }
+                else if(r1.getText().toString().equals("No") && r2.getText().toString().equals("No") && r3.getText().toString().equals("Yes") && r4.getText().toString().equals("Yes")){
+                    String RiskStatus = "Medium";
+                }
+
+                else if(r1.getText().toString().equals("Yes") && r2.getText().toString().equals("No") && r3.getText().toString().equals("Yes") && r4.getText().toString().equals("No")){
+                    String RiskStatus = "Medium";
+                }
+
+                else if(r1.getText().toString().equals("No") && r2.getText().toString().equals("Yes") && r3.getText().toString().equals("No") && r4.getText().toString().equals("Yes")){
+                    String RiskStatus = "Medium";
+                }
+                else
+                {
+                    String RiskStatus = "Low";
+                }
+
                 Toast.makeText(getApplicationContext(), "Submitted", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
