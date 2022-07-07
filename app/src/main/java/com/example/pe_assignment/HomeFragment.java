@@ -86,7 +86,6 @@ public class HomeFragment extends Fragment {
 
                 Intent intent = new Intent(getActivity(), VaccineActivity.class);
                 startActivity(intent);
-                getActivity().finish();
 
             }
         });
@@ -97,7 +96,6 @@ public class HomeFragment extends Fragment {
 
                 Intent intent = new Intent(getActivity(), FAQActivity.class);
                 startActivity(intent);
-                getActivity().finish();
             }
         });
 
@@ -107,7 +105,6 @@ public class HomeFragment extends Fragment {
 
                 Intent intent = new Intent(getActivity(), SelfAssessmentActivity.class);
                 startActivity(intent);
-                getActivity().finish();
             }
         });
 
@@ -117,7 +114,6 @@ public class HomeFragment extends Fragment {
 
                 Intent intent = new Intent(getActivity(), MyRewardActivity.class);
                 startActivity(intent);
-                getActivity().finish();
             }
         });
 
