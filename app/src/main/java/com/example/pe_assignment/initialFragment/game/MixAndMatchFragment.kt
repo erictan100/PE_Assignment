@@ -26,7 +26,7 @@ class MixAndMatchFragment : Fragment() {
         val view:View = inflater.inflate(R.layout.fragment_mix_and_match, container, false)
         val button_mm = view.findViewById<Button>(R.id.button6)
         button_mm.setOnClickListener{
-            val action = MixAndMatchFragmentDirections.actionMixAndMatchFragment2ToMaMgameFragment()
+            val action = MixAndMatchFragmentDirections.actionMixAndMatchFragment2ToMaMgameActivity()
             findNavController().navigate(action)
         }
         val button_back = view.findViewById<ImageButton>(R.id.imageButton2)

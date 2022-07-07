@@ -32,6 +32,7 @@
         android:id="@+id/scrollView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/frameLayout">
 
@@ -52,15 +53,25 @@
                 <TextView
                     android:id="@+id/textView44"
                     android:layout_width="272dp"
-                    android:layout_height="31dp"
-                    android:layout_marginTop="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:text="Nilai R (R value)"
+                    android:text="Active Cases"
                     android:textColor="@color/white"
                     android:textSize="30dp" />
 
                 <TextView
-                    android:id="@+id/textView45"
+                    android:id="@+id/value_active"
+                    android:layout_width="272dp"
+                    android:layout_height="31dp"
+                    android:layout_marginTop="65dp"
+                    android:gravity="center"
+                    android:text="Active cases"
+                    android:textColor="@color/white"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/date1"
                     android:layout_width="272dp"
                     android:layout_height="31dp"
                     android:layout_marginTop="91dp"
@@ -82,15 +93,25 @@
                 <TextView
                     android:id="@+id/textView46"
                     android:layout_width="272dp"
-                    android:layout_height="31dp"
-                    android:layout_marginTop="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:text="Total Confirmed Cases"
+                    android:text="New Cases"
                     android:textColor="@color/white"
                     android:textSize="30dp" />
 
                 <TextView
-                    android:id="@+id/textView47"
+                    android:id="@+id/value_confirmed"
+                    android:layout_width="272dp"
+                    android:layout_height="31dp"
+                    android:layout_marginTop="65dp"
+                    android:gravity="center"
+                    android:text="New cases"
+                    android:textColor="@color/white"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/date2"
                     android:layout_width="272dp"
                     android:layout_height="31dp"
                     android:layout_marginTop="91dp"
@@ -113,14 +134,24 @@
                     android:id="@+id/textView48"
                     android:layout_width="272dp"
                     android:layout_height="31dp"
-                    android:layout_marginTop="55dp"
+                    android:layout_marginTop="20dp"
                     android:gravity="center"
                     android:text="Total Recovered"
                     android:textColor="@color/white"
                     android:textSize="30dp" />
 
                 <TextView
-                    android:id="@+id/textView49"
+                    android:id="@+id/value_recovered"
+                    android:layout_width="272dp"
+                    android:layout_height="31dp"
+                    android:layout_marginTop="65dp"
+                    android:gravity="center"
+                    android:text="Total Recovered"
+                    android:textColor="@color/white"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/date3"
                     android:layout_width="272dp"
                     android:layout_height="31dp"
                     android:layout_marginTop="91dp"
@@ -130,35 +161,7 @@
                     android:textSize="15dp" />
             </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="270dp"
-                android:layout_height="164dp"
-                android:layout_marginLeft="36dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginRight="42dp"
-                app:cardBackgroundColor="#000000"
-                app:cardCornerRadius="10dp">
 
-                <TextView
-                    android:id="@+id/textView50"
-                    android:layout_width="272dp"
-                    android:layout_height="31dp"
-                    android:layout_marginTop="55dp"
-                    android:gravity="center"
-                    android:text="Total Death"
-                    android:textColor="@color/white"
-                    android:textSize="30dp" />
-
-                <TextView
-                    android:id="@+id/textView51"
-                    android:layout_width="272dp"
-                    android:layout_height="31dp"
-                    android:layout_marginTop="91dp"
-                    android:gravity="center"
-                    android:text="setakat 10 April 2022 23:59"
-                    android:textColor="@color/white"
-                    android:textSize="15dp" />
-            </androidx.cardview.widget.CardView>
         </LinearLayout>
     </HorizontalScrollView>
 

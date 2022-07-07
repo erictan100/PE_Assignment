@@ -26,6 +26,9 @@
         <action
             android:id="@+id/action_scanFragment_to_QRScannerFragment"
             app:destination="@id/QRScannerFragment" />
+        <action
+            android:id="@+id/action_scanFragment_to_historyActivity"
+            app:destination="@id/historyActivity" />
     </fragment>
     <fragment
         android:id="@+id/gameFragment"
@@ -50,18 +53,14 @@
             android:id="@+id/action_mixAndMatchFragment2_to_gameFragment"
             app:destination="@id/gameFragment" />
         <action
-            android:id="@+id/action_mixAndMatchFragment2_to_maMgameFragment"
-            app:destination="@id/maMgameFragment" />
+            android:id="@+id/action_mixAndMatchFragment2_to_maMgameActivity"
+            app:destination="@id/maMgameActivity" />
     </fragment>
     <fragment
         android:id="@+id/maMgameFragment"
         android:name="com.example.pe_assignment.initialFragment.game.MaMgameFragment"
         android:label="fragment_ma_mgame"
-        tools:layout="@layout/fragment_ma_mgame" >
-        <action
-            android:id="@+id/action_maMgameFragment_to_mixAndMatchFragment2"
-            app:destination="@id/mixAndMatchFragment2" />
-    </fragment>
+        tools:layout="@layout/fragment_ma_mgame" />
     <fragment
         android:id="@+id/historyFragment"
         android:name="com.example.pe_assignment.initialFragment.scan.HistoryFragment"
@@ -89,4 +88,12 @@
             android:id="@+id/action_scannerCheckInFragment_to_scanFragment"
             app:destination="@id/scanFragment" />
     </fragment>
+    <activity
+        android:id="@+id/maMgameActivity"
+        android:name="com.example.pe_assignment.initialFragment.game.MaMgameActivity"
+        android:label="MaMgameActivity" />
+    <activity
+        android:id="@+id/historyActivity"
+        android:name="com.example.pe_assignment.initialFragment.scan.HistoryActivity"
+        android:label="HistoryActivity" />
 </navigation>

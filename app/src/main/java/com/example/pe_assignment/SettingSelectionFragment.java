@@ -115,7 +115,7 @@ public class SettingSelectionFragment extends Fragment {
                     editor.putBoolean("value",true);
                     editor.apply();
                     darkModeSw.setChecked(true);
-                    //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
                 }
                 else
                 {
@@ -123,7 +123,7 @@ public class SettingSelectionFragment extends Fragment {
                     editor.putBoolean("value",false);
                     editor.apply();
                     darkModeSw.setChecked(false);
-                    //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
                 }
             }
         });

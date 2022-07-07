@@ -89,6 +89,7 @@
                         android:layout_marginEnd="3dp"
                         android:textSize="30dp"
                         android:text="Name"
+                        android:textColor="@color/black"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintLeft_toRightOf="@id/frameLayout2"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -103,6 +104,7 @@
                         android:layout_marginBottom="22dp"
                         android:text="Status: Low Risk"
                         android:textSize="20dp"
+                        android:textColor="@color/black"
                         android:textStyle="italic"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -132,6 +134,7 @@
                     android:layout_marginLeft="17dp"
                     android:gravity="center_vertical"
                     android:text="View Check-In History"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -193,6 +196,7 @@
                     android:layout_marginTop="21dp"
                     android:textSize="15dp"
                     android:textStyle="bold"
+                    android:textColor="@color/black"
                     android:text="Location" />
 
                 <TextView
@@ -203,6 +207,7 @@
                     android:layout_marginRight="20dp"
                     android:layout_marginTop="41dp"
                     android:textSize="13dp"
+                    android:textColor="@color/black"
                     android:text="Last Check-In location" />
 
                 <TextView
@@ -214,6 +219,7 @@
                     android:layout_marginLeft="100dp"
                     android:textSize="15dp"
                     android:textStyle="bold"
+                    android:textColor="@color/black"
                     android:text="Date:" />
 
                 <TextView
@@ -224,6 +230,7 @@
                     android:layout_marginTop="125dp"
                     android:layout_marginRight="162dp"
                     android:textSize="13dp"
+                    android:textColor="@color/black"
                     android:text="Check-In date" />
 
                 <TextView
@@ -235,6 +242,7 @@
                     android:layout_marginTop="105dp"
                     android:textSize="15dp"
                     android:textStyle="bold"
+                    android:textColor="@color/black"
                     android:text="Time:" />
 
                 <TextView
@@ -245,6 +253,7 @@
                     android:layout_marginTop="125dp"
                     android:layout_marginRight="22dp"
                     android:textSize="13dp"
+                    android:textColor="@color/black"
                     android:text="Check-In Time" />
 
                 <TextView
@@ -256,6 +265,7 @@
                     android:layout_marginRight="192dp"
                     android:textSize="15dp"
                     android:textStyle="bold"
+                    android:textColor="@color/black"
                     android:text="Status:" />
 
                 <TextView
@@ -266,6 +276,7 @@
                     android:layout_marginTop="172dp"
                     android:layout_marginRight="162dp"
                     android:textSize="13dp"
+                    android:textColor="@color/black"
                     android:text="Check-In" />
 
                 <androidx.appcompat.widget.AppCompatButton
