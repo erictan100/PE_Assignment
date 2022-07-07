@@ -34,7 +34,7 @@ public class ProfileFragment extends Fragment {
     RecyclerView digitalCert;
     RecyclerView.Adapter adapter;
     private TextView ic, dob, email, state, phoneNo, nameProfile;
-
+    private TextView certName, certIC;
 
     String emailDB, phoneNoDB, stateDB, dobDB, icDB;
 
@@ -67,7 +67,11 @@ public class ProfileFragment extends Fragment {
         phoneNo = root.findViewById(R.id.profile_phoneNumber);
         nameProfile = root.findViewById(R.id.profilename_txt);
 
+        certIC =  root.findViewById(R.id.tv_certIc);
+        certName = root.findViewById(R.id.tv_certName);
+
         nameProfile.setText(scanName);
+        certName.setText(scanName);
 
         reference = FirebaseDatabase.getInstance().getReference("users");
         reference.addValueEventListener(new ValueEventListener() {
@@ -85,6 +89,8 @@ public class ProfileFragment extends Fragment {
                 dob.setText(dobDB);
                 phoneNo.setText(phoneNoDB);
                 ic.setText(icDB);
+
+                certIC.setText(icDB);
             }
 
             @Override
