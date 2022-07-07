@@ -1,5 +1,6 @@
 package com.example.pe_assignment.initialFragment.profile;
 
+import static com.example.pe_assignment.LoginActivity.scanName;
 import static com.example.pe_assignment.LoginActivity.userID;
 
 import android.content.Intent;
@@ -32,7 +33,8 @@ public class ProfileFragment extends Fragment {
 
     RecyclerView digitalCert;
     RecyclerView.Adapter adapter;
-    private TextView ic, dob, email, state, phoneNo;
+    private TextView ic, dob, email, state, phoneNo, nameProfile;
+
 
     String emailDB, phoneNoDB, stateDB, dobDB, icDB;
 
@@ -63,6 +65,9 @@ public class ProfileFragment extends Fragment {
         email = root.findViewById(R.id.profile_email);
         state = root.findViewById(R.id.profile_state);
         phoneNo = root.findViewById(R.id.profile_phoneNumber);
+        nameProfile = root.findViewById(R.id.profilename_txt);
+
+        nameProfile.setText(scanName);
 
         reference = FirebaseDatabase.getInstance().getReference("users");
         reference.addValueEventListener(new ValueEventListener() {

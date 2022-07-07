@@ -26,6 +26,10 @@ public class SelfAssessmentActivity extends AppCompatActivity {
     RadioButton r1,r2,r3,r4;
     RadioGroup q1, q2, q3,q4;
 
+    public static String riskstatus;
+
+    String RiskStatus;
+
     DatabaseReference reference;
 
     AppCompatButton submit;
@@ -72,42 +76,44 @@ public class SelfAssessmentActivity extends AppCompatActivity {
 
                 if(r1.getText().toString().equals("Yes") && r2.getText().toString().equals("Yes") && r3.getText().toString().equals("Yes") && r4.getText().toString().equals("Yes")){
 
-                    String RiskStatus = "High";
+                    RiskStatus = "High";
                 }
                 else if (r1.getText().toString().equals("Yes") && r2.getText().toString().equals("Yes") && r3.getText().toString().equals("Yes") && r4.getText().toString().equals("No")){
 
-                    String RiskStatus = "High";
+                    RiskStatus = "High";
                 }
                 else if (r1.getText().toString().equals("Yes") && r2.getText().toString().equals("Yes") && r3.getText().toString().equals("No") && r4.getText().toString().equals("Yes")){
 
-                    String RiskStatus = "High";
+                    RiskStatus = "High";
                 }
                 else if (r1.getText().toString().equals("Yes") && r2.getText().toString().equals("No") && r3.getText().toString().equals("Yes") && r4.getText().toString().equals("Yes")){
 
-                    String RiskStatus = "High";
+                    RiskStatus = "High";
                 }
                 else if (r1.getText().toString().equals("No") && r2.getText().toString().equals("Yes") && r3.getText().toString().equals("Yes") && r4.getText().toString().equals("Yes")){
 
-                    String RiskStatus = "High";
+                    RiskStatus = "High";
                 }
                 else if(r1.getText().toString().equals("Yes") && r2.getText().toString().equals("Yes") && r3.getText().toString().equals("No") && r4.getText().toString().equals("No")){
-                    String RiskStatus = "Medium";
+                    RiskStatus = "Medium";
                 }
                 else if(r1.getText().toString().equals("No") && r2.getText().toString().equals("No") && r3.getText().toString().equals("Yes") && r4.getText().toString().equals("Yes")){
-                    String RiskStatus = "Medium";
+                    RiskStatus = "Medium";
                 }
 
                 else if(r1.getText().toString().equals("Yes") && r2.getText().toString().equals("No") && r3.getText().toString().equals("Yes") && r4.getText().toString().equals("No")){
-                    String RiskStatus = "Medium";
+                    RiskStatus = "Medium";
                 }
 
                 else if(r1.getText().toString().equals("No") && r2.getText().toString().equals("Yes") && r3.getText().toString().equals("No") && r4.getText().toString().equals("Yes")){
-                    String RiskStatus = "Medium";
+                    RiskStatus = "Medium";
                 }
                 else
                 {
-                    String RiskStatus = "Low";
+                    RiskStatus = "Low";
                 }
+
+                riskstatus = RiskStatus;
 
                 Toast.makeText(getApplicationContext(), "Submitted", Toast.LENGTH_SHORT).show();
 

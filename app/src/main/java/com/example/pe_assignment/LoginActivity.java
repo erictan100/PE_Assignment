@@ -30,6 +30,8 @@ public class LoginActivity extends AppCompatActivity {
     ProgressBar progressBar;
     AppCompatButton twitter, facebook;
 
+    public static String scanName;
+
     public static String userID;
 
     @Override
@@ -79,6 +81,7 @@ public class LoginActivity extends AppCompatActivity {
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
 
+
         Query checkUser = reference.orderByChild("ic").equalTo(userIC);
 
         checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -91,6 +94,8 @@ public class LoginActivity extends AppCompatActivity {
                     ic.setErrorEnabled(false);
 
                     userID = userIC;
+
+                    scanName = snapshot.child(userIC).child("name").getValue(String.class);
 
                     String passwordFromDB = snapshot.child(userIC).child("pwd").getValue(String.class);
 

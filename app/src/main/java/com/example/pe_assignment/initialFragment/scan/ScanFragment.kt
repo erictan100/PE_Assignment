@@ -7,11 +7,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.example.pe_assignment.LoginActivity.scanName
 import com.example.pe_assignment.R
+import com.example.pe_assignment.SelfAssessmentActivity.riskstatus
 import com.google.zxing.integration.android.IntentIntegrator
 import retrofit2.Call
 import retrofit2.Callback
@@ -40,6 +43,12 @@ class ScanFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view:View = inflater.inflate(R.layout.fragment_scan, container, false)
+
+        val textView = view.findViewById<TextView>(R.id.textView14)
+        textView.setText("Status: " + riskstatus)
+
+        val scanname = view.findViewById<TextView>(R.id.textView13)
+        scanname.setText(scanName)
 
         val button_scan = view.findViewById<Button>(R.id.button3)
         button_scan.setOnClickListener{
@@ -136,18 +145,15 @@ class ScanFragment : Fragment() {
                 val current_date = LocalDate.now().toString()
                 val current_time = LocalTime.now().toString()
                 val history= History(current_date, current_time, scanResult)
-                //historyViewModel.insert(history);
-                //save_postData(current_date,current_time,item[0],item[1]);
+
                 mainViewModel?.insert(history)
 
                 // Store the scanner text to array list
                 val historyListSize = historyList.size
-                // Add a new word to the historyList.
+
                 historyList.addLast(history)
                 adapter!!.submitList(historyList)
-//                recyclerView.getAdapter().notifyDataSetChanged()
-//                // Scroll to the bottom.
-//                recyclerView.smoothScrollToPosition(historyListSize)
+
             }
         } else {
             // This is important, otherwise the result will not be passed to the fragment
