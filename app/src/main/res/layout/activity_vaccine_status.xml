@@ -92,7 +92,7 @@
                     android:layout_below="@id/ic"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/lemon"
-                    android:text="16/4/2022"
+                    android:text="Date"
                     android:textColor="@color/font_grey"
                     android:textSize="20sp" />
 
